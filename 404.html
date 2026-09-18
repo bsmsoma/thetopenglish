@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página não encontrada | The Top English</title>
+  <meta name="robots" content="noindex">
+  <script>
+    // O GitHub Pages mostra esta página em qualquer endereço inexistente, inclusive em subpastas.
+    // O <base> faz os arquivos carregarem certo tanto no domínio próprio quanto no
+    // endereço provisório usuario.github.io/thetopenglish/.
+    (function () {
+      var partes = location.pathname.split('/').filter(Boolean);
+      var base = /\.github\.io$/.test(location.hostname) && partes.length > 0 ? '/' + partes[0] + '/' : '/';
+      document.write('<base href="' + base + '">');
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="section not-found">
+    <div class="container">
+      <h1>Página não encontrada</h1>
+      <p>O endereço pode ter mudado ou ter sido digitado errado. Tudo sobre a escola está na página inicial.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="./">Ir para a página inicial</a>
+        <a class="btn btn--ghost" href="./#consultar">Consultar vaga</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
