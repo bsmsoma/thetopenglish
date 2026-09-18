@@ -13,7 +13,7 @@ HTML, CSS e JavaScript puro: sem framework, sem build e sem dependências.
 ```
 index.html            página única: hero, cursos, como funciona, sobre, dúvidas, formulário, contato
 privacidade.html      aviso de privacidade (LGPD) do formulário
-404.html              página de endereço inexistente (GitHub Pages)
+404.html              página de endereço inexistente (o Netlify usa sozinho)
 css/tokens.css        cores, fontes, espaçamentos (mude aqui para mudar o site todo)
 css/styles.css        estilos, mobile-first
 js/config.js          número do WhatsApp, endereço da planilha, versão do aviso
@@ -44,7 +44,8 @@ Abra <http://localhost:8080>. Dois cliques no `index.html` também funcionam, ma
 - [ ] Autorização da Maureen para publicar o nome dela, os textos e as fotos. Fotos de crianças só com autorização dos responsáveis.
 - [ ] Endereço no bloco `application/ld+json` do `index.html` (dados para o Google). O telefone já está lá.
 - [ ] Planilha configurada e testada (seção abaixo) e verificação em duas etapas ativada na conta Google da escola.
-- [ ] Depois de definir o domínio: `og:image` com a URL completa (`https://…/assets/img/og-image.png`), `sitemap.xml` e a linha `Sitemap:` do `robots.txt`.
+- [ ] Depois do primeiro deploy: `og:image` com a URL completa (`https://…/assets/img/og-image.png`). Com domínio próprio: `sitemap.xml` e a linha `Sitemap:` do `robots.txt`.
+- [ ] Liberar o Google: quando a Maureen aprovar o conteúdo, apagar a linha `<meta name="robots" content="noindex">` de `index.html` e `privacidade.html`. Até lá o protótipo não aparece nas buscas.
 
 ## Planilha de interessados
 
@@ -61,18 +62,23 @@ Quando mudar o `Code.gs`, use **Implantar → Gerenciar implantações → Edita
 
 O script só acrescenta linhas. Ele não devolve dados, ignora envios de robôs (campo-armadilha e limite de 20 envios por minuto) e impede que um texto vire fórmula na planilha.
 
-## Publicar
+## Publicar (Netlify)
 
-Para a avaliação parcial, o jeito mais simples é o **GitHub Pages**:
+O site não tem etapa de build. O Netlify publica os arquivos do repositório como estão e publica de novo a cada push na `main`.
 
-1. Suba os arquivos para um repositório no GitHub.
-2. **Settings → Pages → Deploy from a branch →** `main` / `(root)`.
-3. O site fica em `https://USUARIO.github.io/thetopenglish/`. A página 404 já funciona nesse endereço.
+1. Em [app.netlify.com](https://app.netlify.com), vá em **Add new site → Import an existing project → GitHub** e autorize o acesso ao `bsmsoma/thetopenglish`. O repositório pode continuar privado.
+2. *Branch to deploy:* `main`. *Build command:* vazio. *Publish directory:* vazio (raiz do repositório).
+3. Clique em **Deploy**. Depois, em **Site configuration → Change site name**, escolha o endereço, por exemplo `thetopenglish.netlify.app`.
+4. Troque o `og:image` do `index.html` pela URL completa da imagem nesse endereço.
+
+Também dá para publicar pela linha de comando: `npm install -g netlify-cli`, `netlify login` e, na pasta do projeto, `netlify deploy --prod --dir .`.
+
+A página 404 e o modo revisão (`?revisar`) funcionam no Netlify sem nenhum ajuste.
 
 Para o site definitivo da escola:
 
-- **Domínio:** registre no Registro.br, no CPF ou CNPJ da escola (cerca de R$ 40 por ano), e ligue ao serviço de hospedagem.
-- **Hospedagem:** o GitHub Pages não se destina a sites comerciais. Avaliem um serviço cujo plano gratuito permita uso comercial, como o Cloudflare Pages, e confiram os termos na hora de publicar.
+- **Domínio:** registre no Registro.br, no CPF ou CNPJ da escola (cerca de R$ 40 por ano), e ligue em **Domain management**, no Netlify.
+- **Plano:** confiram os limites e os termos do plano gratuito do Netlify na hora de publicar.
 - **Portabilidade:** como o site é só HTML, CSS e JS, ele muda de hospedagem sem alteração nenhuma.
 - **Regra da disciplina:** não prometer à escola hospedagem gratuita permanente nem manutenção depois do semestre.
 

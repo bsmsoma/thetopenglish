@@ -6,9 +6,9 @@
   <title>Página não encontrada | The Top English</title>
   <meta name="robots" content="noindex">
   <script>
-    // O GitHub Pages mostra esta página em qualquer endereço inexistente, inclusive em subpastas.
-    // O <base> faz os arquivos carregarem certo tanto no domínio próprio quanto no
-    // endereço provisório usuario.github.io/thetopenglish/.
+    // O Netlify (e o GitHub Pages) mostram esta página em qualquer endereço inexistente, inclusive em subpastas.
+    // O <base> faz os arquivos carregarem certo na raiz do site (Netlify, domínio próprio) e também
+    // num endereço de projeto do GitHub Pages, como usuario.github.io/thetopenglish/.
     (function () {
       var partes = location.pathname.split('/').filter(Boolean);
       var base = /\.github\.io$/.test(location.hostname) && partes.length > 0 ? '/' + partes[0] + '/' : '/';
