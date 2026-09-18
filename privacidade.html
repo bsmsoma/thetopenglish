@@ -7,7 +7,7 @@
   <meta name="description" content="Como a The Top English usa os dados informados no formulário de consulta de vaga do site.">
   <meta name="theme-color" content="#0f4d3e">
   <script>document.documentElement.classList.add('js');</script>
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="data:,">
   <link rel="preload" href="assets/fonts/lexend-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -20,15 +20,13 @@
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="brand" href="index.html">
-        <svg class="brand__mark" viewBox="0 0 44 44" aria-hidden="true">
-          <circle cx="22" cy="25" r="16" fill="#f7f7f2" stroke="#0f4d3e" stroke-width="3"/>
-          <ellipse cx="22" cy="25" rx="7" ry="16" fill="none" stroke="#1b7a5e" stroke-width="1.75"/>
-          <path d="M6 25h32M8.2 17h27.6M8.2 33h27.6" stroke="#1b7a5e" stroke-width="1.5"/>
-          <path d="M22 2.5 29.5 13.5h-15z" fill="#d6f57a" stroke="#10201b" stroke-width="2" stroke-linejoin="round"/>
-        </svg>
+        <span class="brand__logo-slot" aria-hidden="true" data-confirmar="Logo original da escola">Inserir logo</span>
         <span class="brand__name">The Top English</span>
       </a>
-      <a class="btn btn--ghost btn--sm" href="index.html">Voltar ao site</a>
+      <a class="btn btn--ghost btn--sm btn--back" href="index.html">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="btn__label">Voltar ao site</span>
+      </a>
     </div>
   </header>
 
@@ -85,7 +83,7 @@
         <li>pedir a exclusão dos seus dados e retirar o seu consentimento;</li>
         <li>saber com quem os dados foram compartilhados.</li>
       </ul>
-      <p>Para fazer qualquer pedido, fale com a escola pelo <span data-confirmar="WhatsApp da escola para pedidos de privacidade">WhatsApp [número a preencher]</span> ou pelo e-mail <span data-confirmar="E-mail de contato da escola">[e-mail a preencher]</span>. Respondemos em até 15 dias. Se não ficar satisfeito, você pode apresentar uma reclamação à Autoridade Nacional de Proteção de Dados (ANPD), em <a href="https://www.gov.br/anpd" target="_blank" rel="noopener">gov.br/anpd</a>.</p>
+      <p>Para fazer qualquer pedido, fale com a escola pelo WhatsApp (63) 98136-9088 ou pelo e-mail <span data-confirmar="E-mail de contato da escola">[e-mail a preencher]</span>. Respondemos em até 15 dias. Se não ficar satisfeito, você pode apresentar uma reclamação à Autoridade Nacional de Proteção de Dados (ANPD), em <a href="https://www.gov.br/anpd" target="_blank" rel="noopener">gov.br/anpd</a>.</p>
 
       <h2>Cookies e rastreamento</h2>
       <p>Este site não usa cookies nem ferramentas de rastreamento de visitantes. As fontes e imagens são carregadas do próprio site. Se um dia passarmos a contar visitas, será com uma ferramenta que não usa cookies nem identifica você, e este aviso será atualizado.</p>

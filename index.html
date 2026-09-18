@@ -8,7 +8,9 @@
   <meta name="theme-color" content="#0f4d3e">
   <script>document.documentElement.classList.add('js');</script>
 
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <!-- Favicon: fazer a partir do logo original da escola (ver COMO-ATUALIZAR.md).
+       Até lá, "data:," evita que o navegador procure um ícone que ainda não existe. -->
+  <link rel="icon" href="data:,">
   <link rel="preload" href="assets/fonts/lexend-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -24,12 +26,13 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
-  <!-- Dados para o Google. Endereço e telefone entram aqui quando forem confirmados (ver README). -->
+  <!-- Dados para o Google. O endereço entra aqui quando for confirmado (ver README). -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": ["EducationalOrganization", "LocalBusiness"],
     "name": "The Top English",
+    "telephone": "+55 63 98136-9088",
     "slogan": "The only way to the TOP!",
     "description": "Curso de inglês para crianças, adolescentes e adultos, aulas individuais e preparatório para IELTS e TOEFL.",
     "foundingDate": "1997",
@@ -52,12 +55,8 @@
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="brand" href="#topo">
-        <svg class="brand__mark" viewBox="0 0 44 44" aria-hidden="true">
-          <circle cx="22" cy="25" r="16" fill="#f7f7f2" stroke="#0f4d3e" stroke-width="3"/>
-          <ellipse cx="22" cy="25" rx="7" ry="16" fill="none" stroke="#1b7a5e" stroke-width="1.75"/>
-          <path d="M6 25h32M8.2 17h27.6M8.2 33h27.6" stroke="#1b7a5e" stroke-width="1.5"/>
-          <path d="M22 2.5 29.5 13.5h-15z" fill="#d6f57a" stroke="#10201b" stroke-width="2" stroke-linejoin="round"/>
-        </svg>
+        <!-- Espaço do logo: a equipe não tinha o arquivo original. Trocar pelo logo da escola (ver COMO-ATUALIZAR.md). -->
+        <span class="brand__logo-slot" aria-hidden="true" data-confirmar="Logo original da escola">Inserir logo</span>
         <span class="brand__name">The Top English</span>
       </a>
 
@@ -463,6 +462,7 @@
             <span data-confirmar="Endereço completo: rua, número, bairro e CEP">Rua, número e bairro</span><br>
             <span data-confirmar="Cidade">Palmas – TO</span>
           </address>
+          <p class="place__phone">WhatsApp <a href="https://wa.me/5563981369088" data-whatsapp>(63) 98136-9088</a></p>
           <p class="place__hours" data-confirmar="Horário de atendimento">Horário de atendimento a confirmar</p>
         </div>
         <div class="place__actions">

@@ -16,11 +16,17 @@ Na dúvida, mude uma coisa por vez e confira o site depois.
 
 ## Trocar o número do WhatsApp
 
-Arquivo `js/config.js`, linha `whatsapp`. Use só números, com 55 + DDD + número:
+O número atual é (63) 98136-9088. Se mudar, troque nestes lugares:
+
+1. `js/config.js`, linha `whatsapp`. Use só números, com 55 + DDD + número. É este que faz os botões e o formulário funcionarem:
 
 ```js
-whatsapp: '5563912345678',
+whatsapp: '5563981369088',
 ```
+
+2. `index.html`, seção `Onde estamos`: o número escrito e o link `https://wa.me/55…`.
+3. `index.html`, linha `"telephone"` nos dados para o Google (perto do topo do arquivo).
+4. `privacidade.html`, seção “Seus direitos”.
 
 ## Novidades e promoções (barra verde do topo)
 
@@ -35,6 +41,27 @@ Para **esconder** a barra, acrescente `hidden` na linha de cima dela: `<div clas
 ## Mudar a descrição de um curso
 
 Arquivo `index.html`. Procure pelo nome do curso (por exemplo, `Preparatório IELTS`) e troque o texto do parágrafo logo abaixo.
+
+## Colocar o logo da escola
+
+O site mostra “Inserir logo” porque a equipe não tinha o arquivo original. Com o logo em mãos, de preferência em SVG ou PNG com fundo transparente:
+
+1. Salve o arquivo como `assets/img/logo.svg` (ou `logo.png`).
+2. Em `index.html` e em `privacidade.html`, troque a linha `<span class="brand__logo-slot" …>Inserir logo</span>` por:
+
+```html
+<img class="brand__logo" src="assets/img/logo.svg" alt="" width="48" height="48">
+```
+
+   O `alt` fica vazio porque o nome da escola já aparece escrito ao lado.
+
+3. Favicon (ícone da aba do navegador): gere a partir do logo, por exemplo no site realfavicongenerator.net. Salve como `assets/img/favicon.png` e troque, nos três arquivos `.html`, a linha `<link rel="icon" href="data:,">` por:
+
+```html
+<link rel="icon" href="assets/img/favicon.png">
+```
+
+4. Imagem de compartilhamento (`assets/img/og-image.png`): também mostra “Inserir logo”. Peça à equipe para gerar de novo com o logo, ou troque por uma imagem de 1200 × 630 px feita no Canva.
 
 ## Colocar a foto da teacher
 

@@ -243,10 +243,41 @@ section[id] {
   text-decoration: none;
 }
 
-.brand__mark {
+/* Espaço reservado enquanto a escola não envia o logo original. */
+.brand__logo-slot {
+  display: inline-flex;
   flex: none;
-  width: 2.5rem;
+  align-items: center;
   height: 2.5rem;
+  padding-inline: 0.75rem;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--green-800);
+  white-space: nowrap;
+  background: var(--green-50);
+  border: 1.5px dashed var(--green-800);
+  border-radius: var(--radius-pill);
+}
+
+/* Logo original, quando chegar: <img class="brand__logo" ...> (ver COMO-ATUALIZAR.md). */
+.brand__logo {
+  flex: none;
+  width: auto;
+  height: 3rem;
+}
+
+@media (max-width: 359.98px) {
+  .brand {
+    gap: 0.5rem;
+    font-size: 0.9375rem;
+  }
+
+  .brand__logo-slot {
+    padding-inline: 0.5rem;
+    font-size: 0.6875rem;
+  }
 }
 
 .site-nav {
@@ -313,6 +344,24 @@ section[id] {
 @media (min-width: 520px) {
   .site-header__cta {
     display: inline-flex;
+  }
+}
+
+/* No celular, o "Voltar ao site" da página de privacidade vira só a seta (o texto segue para leitores de tela). */
+@media (max-width: 519.98px) {
+  .btn--back {
+    width: 2.75rem;
+    min-height: 2.75rem;
+    padding: 0;
+  }
+
+  .btn--back .btn__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
   }
 }
 
@@ -1132,6 +1181,15 @@ html:not(.js) .form {
   line-height: 1.5;
 }
 
+.place__phone {
+  margin-top: 1rem;
+  font-size: var(--text-lg);
+}
+
+.place__phone a {
+  font-weight: 600;
+}
+
 .place__hours {
   margin-top: 0.75rem;
   color: var(--muted);
@@ -1368,6 +1426,11 @@ html:not(.js) .form {
   content: "Confirmar: " attr(data-confirmar);
   background: #fff4e5;
   border-radius: 6px;
+}
+
+/* O espaço do logo já diz o que falta; a etiqueta no cabeçalho empurraria o menu. */
+.review-mode .brand__logo-slot::after {
+  content: none;
 }
 
 /* ---------- Movimento: um só momento orquestrado (a escada sobe) ---------- */

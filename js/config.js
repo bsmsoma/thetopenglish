@@ -4,10 +4,10 @@
   ou ligar a planilha de interessados. Passo a passo em COMO-ATUALIZAR.md.
 */
 window.SITE_CONFIG = {
-  // WhatsApp da escola: só números, com 55 + DDD + número. Exemplo: '5563912345678'.
-  // [CONFIRMAR] com a escola antes de publicar. Enquanto estiver vazio,
-  // os botões de WhatsApp levam ao formulário.
-  whatsapp: '',
+  // WhatsApp da escola (teacher Maureen): só números, com 55 + DDD + número.
+  // Se mudar, atualize também o número escrito em index.html (Onde estamos e dados para o Google)
+  // e em privacidade.html. Vazio: os botões de WhatsApp levam ao formulário.
+  whatsapp: '5563981369088',
 
   // Endereço do Web App do Google Apps Script (apps-script/Code.gs), terminado em /exec.
   // Vazio: o formulário funciona só com o WhatsApp, sem registrar na planilha.

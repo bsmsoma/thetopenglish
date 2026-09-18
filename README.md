@@ -20,7 +20,7 @@ js/config.js          número do WhatsApp, endereço da planilha, versão do avi
 js/main.js            menu, formulário → WhatsApp/planilha, ?origem=, ?servico=, ?revisar
 apps-script/Code.gs   script da planilha (Google Apps Script)
 assets/fonts/         fonte Lexend (licença OFL em OFL.txt)
-assets/img/           favicon e imagem de compartilhamento (og-image.png)
+assets/img/           imagem de compartilhamento (og-image.png); logo e favicon entram aqui quando a escola enviar
 COMO-ATUALIZAR.md     guia rápido para trocar textos, aviso, número e fotos
 ```
 
@@ -37,11 +37,12 @@ Abra <http://localhost:8080>. Dois cliques no `index.html` também funcionam, ma
 
 ## Antes de publicar
 
-- [ ] Número do WhatsApp da escola em `js/config.js`. Enquanto estiver vazio, os botões de WhatsApp levam ao formulário, e o formulário avisa que o número falta.
+- [x] Número do WhatsApp da escola: (63) 98136-9088, em `js/config.js`, em “Onde estamos”, nos dados para o Google e no aviso de privacidade.
 - [ ] Revisar com a Maureen todos os itens do modo revisão: cidade, endereço, horário, ano de início, grafia do nome, aula experimental, turmas infantis, aulas online, Instagram.
-- [ ] Preencher no `privacidade.html` o CNPJ, o endereço, o WhatsApp e o e-mail para pedidos de privacidade.
+- [ ] Preencher no `privacidade.html` o CNPJ, o endereço e o e-mail para pedidos de privacidade.
+- [ ] Logo original da escola, em alta resolução ou vetor (SVG/PDF). Ele entra no lugar dos espaços “Inserir logo” (cabeçalho e imagem de compartilhamento) e serve de base para o favicon. A equipe não tinha o arquivo, então não criou um logo.
 - [ ] Autorização da Maureen para publicar o nome dela, os textos e as fotos. Fotos de crianças só com autorização dos responsáveis.
-- [ ] Endereço e telefone no bloco `application/ld+json` do `index.html` (dados para o Google).
+- [ ] Endereço no bloco `application/ld+json` do `index.html` (dados para o Google). O telefone já está lá.
 - [ ] Planilha configurada e testada (seção abaixo) e verificação em duas etapas ativada na conta Google da escola.
 - [ ] Depois de definir o domínio: `og:image` com a URL completa (`https://…/assets/img/og-image.png`), `sitemap.xml` e a linha `Sitemap:` do `robots.txt`.
 
